@@ -1,0 +1,84 @@
+.menuContainer {
+  position: relative;
+  color: white;
+  font-family: 'Montserrat';
+}
+.menuBox {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.menuBox:hover {
+  background-color: rgba(240, 248, 255, 0.144);
+  transition: 0.5s;
+}
+.menu {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+}
+.menu::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  top: -5px;
+  left: 0;
+}
+.menu::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  top: 5px;
+  left: 0;
+}
+.menuList {
+  min-width: 50px;
+  min-height: 50px;
+  position: absolute;
+  background: rgb(54, 50, 50);
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 10px;
+}
+.menuListHidden {
+  display: none;
+}
+.menuListActive {
+  animation-name: activeList;
+  animation-duration: 0.5s;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap:5px 0;
+}
+li {
+  list-style: none;
+  cursor: pointer;
+  padding: 5px;
+}
+li:hover {
+  background: rgb(92, 85, 85);
+}
+
+@keyframes activeList {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

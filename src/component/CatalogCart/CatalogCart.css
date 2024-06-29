@@ -1,0 +1,26 @@
+.catalogCart {
+    display: flex;
+    padding: 10px 0;
+    font-family: 'Montserrat';
+    border-top: 1px solid rgba(0, 0, 0, 0.253);
+    margin: -1px;
+
+}
+.catalogCartImg {
+    width: 150px;
+    height: 200px;
+    background: rgb(12, 209, 209);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.catalogCartDesc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.catalogCartDate {
+    padding: 5px 0;
+}

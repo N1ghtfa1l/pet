@@ -1,0 +1,25 @@
+.rightButton {
+  color: white;
+  background: rgb(4, 85, 151);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 20px;
+}
+.rightButton:hover {
+  background: rgb(98, 119, 136);
+}
+
+.rightButtonActive {
+  color: black;
+  background: white(4, 85, 151);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 20px;
+
+}

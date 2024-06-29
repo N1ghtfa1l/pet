@@ -1,0 +1,34 @@
+.inputBox {
+  position: relative;
+  color: white;
+}
+.inputList {
+  width: 400px;
+  min-height: 50px;
+  background: rgb(54, 50, 50);
+  position: absolute;
+  flex-direction: column;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px 0;
+  font-family: 'Montserrat';
+}
+.inputListActive {
+  display: flex;
+  animation-name: activeInput;
+  animation-duration: 0.5s;
+}
+.inputListHidden {
+  display: none;
+}
+@keyframes activeInput {
+  0% {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

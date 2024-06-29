@@ -1,0 +1,13 @@
+.leftButton {
+    color: white;
+    background: rgb(4, 85, 151);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-size: 20px;
+}
+.leftButton:hover {
+    background: rgb(30, 116, 187);
+}

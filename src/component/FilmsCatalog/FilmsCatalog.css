@@ -1,0 +1,49 @@
+.bigContainer {
+    width: 1800px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.catalogInner {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    margin: 80px;
+}
+.catalogTitle {
+    font-size: 50px;
+    font-family: 'Montserrat';
+    
+}
+.catalogSubtitle {
+    font-size: 40px;
+    font-family: 'Montserrat';
+    color: rgb(73, 72, 72);
+
+}
+.catalogContent {
+    display: flex;
+    gap:  10px;
+    margin: 20px 0 0 0;
+}
+.catalogLeft {
+    width: 30%;
+    display: flex;
+    gap: 0 10px;
+    justify-content: start;
+    align-items: start;
+}
+.catalogSelect {
+    font-size: 20px;
+    font-family: 'Montserrat';
+    background: rgb(0, 119, 255);
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.catalogSelect:hover {
+    background: rgb(0, 102, 255);
+}
+.catalogRight {
+    width: 70%;
+}

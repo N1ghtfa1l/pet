@@ -1,0 +1,17 @@
+.morePostBtn {
+    justify-self: center;
+    background: red;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: -90px;
+    right: 0;
+    left: 0;
+}
+.morePostBtn:hover {
+    background: rgb(247, 62, 62);
+
+}

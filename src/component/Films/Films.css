@@ -1,0 +1,23 @@
+.films {
+    margin: 100px 0;
+    position: relative;
+
+}
+.container {
+    width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.filmsInner {
+    min-height: 1000px;
+    font-size: 30px;
+}
+.filmsTitle {
+    margin: 10px 0;
+}
+
+.filmsInnerContent {
+    display: flex;
+    gap: 20px 50px;
+    flex-wrap: wrap;
+}
