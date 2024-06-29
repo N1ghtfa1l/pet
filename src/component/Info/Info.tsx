@@ -12,7 +12,6 @@ const Info = () => {
   const { id } = useParams<{ id: string }>();
   const films = useSelector((state: RootState) => state.film.value);
   const film = films.find((film) => film.id.toString() === id);
-  
 
   return (
     <div className="info">
