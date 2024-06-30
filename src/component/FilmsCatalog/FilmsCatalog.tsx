@@ -5,16 +5,16 @@ import CatalogCart from "../CatalogCart/CatalogCart";
 import PostService from "../API/fetch";
 import { Film } from "../../types/types";
 import { useEffect } from "react";
+import FilmsCatalogCart from "../FilmsCatalogCart/FilmsCatalogCart";
 
 const FilmsCatalog = () => {
-
-  const [films, setFilms] = useState<Film[]>([])
+  const [films, setFilms] = useState<Film[]>([]);
 
   async function fetchFilm() {
     const users = await PostService.getAll();
     setFilms(users);
   }
-  
+
   useEffect(() => {
     fetchFilm();
   }, []);
@@ -36,14 +36,14 @@ const FilmsCatalog = () => {
             <div className="catalogLeft">
               {select.map((el) => (
                 <div key={el} onClick={() => setSelectedGenre(el)}>
-                  <div className="catalogSelect" key={el}>{el}</div>
+                  <div className="catalogSelect" key={el}>
+                    {el}
+                  </div>
                 </div>
               ))}
             </div>
             <div className="catalogRight">
-              {selectFilms.length > 0
-                ? selectFilms.map((el: any) => <CatalogCart film={el}  key={el.id} />)
-                : films.map((el: any) => <CatalogCart film={el} key={el.id} />)}
+              <FilmsCatalogCart films={films} selectFilms={selectFilms} />
             </div>
           </div>
         </div>

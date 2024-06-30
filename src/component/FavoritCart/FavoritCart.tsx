@@ -3,19 +3,18 @@ import "./FavoritCart.css";
 import { Film } from "../../types/types";
 import { useDispatch } from "react-redux";
 import { removeFavorit } from "../store/slices/slicesFavorit";
-
-
+import BtnDeleteFavorit from "../UI/BtnDeleteFavorit/BtnDeleteFavorit";
 
 interface Props {
-  el:Film,
+  el: Film;
 }
 
-const FavoritCart:FC<Props> = ({el}) => {
-  const dispatch = useDispatch()
+const FavoritCart: FC<Props> = ({ el }) => {
+  const dispatch = useDispatch();
 
-const handleDelete = (id:number) => {
-  dispatch(removeFavorit(id))
-}
+  const handleDelete = (id: number) => {
+    dispatch(removeFavorit(id));
+  };
 
   return (
     <div className="favoritInnerContent">
@@ -27,7 +26,7 @@ const handleDelete = (id:number) => {
           <div className="favoritDate">{el.date}</div>
         </div>
       </div>
-      <button onClick={()=> handleDelete(el.id)} className="buttonFavoritDelete">Удалить</button>
+      <BtnDeleteFavorit handleDelete={handleDelete} el={el} />
     </div>
   );
 };

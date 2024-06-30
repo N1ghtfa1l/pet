@@ -1,31 +1,30 @@
 .filmsCart {
-    width: 200px;
+  width: 200px;
 }
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 .filmsCartInner {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
 }
 .filmsCartImg {
-    width: 200px;
-    height: 400px;
-    background: rgb(4, 61, 114);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 200px;
+  height: 400px;
+  background: rgb(4, 61, 114);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .filmsCartTitle {
-    font-size: 25px;
-    margin: 10px 0;
-    word-wrap: break-word;
-
+  font-size: 25px;
+  margin: 10px 0;
+  word-wrap: break-word;
 }
 .filmsCartData {
-    font-size: 20px;
+  font-size: 20px;
 }

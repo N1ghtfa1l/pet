@@ -1,0 +1,8 @@
+.notificationBody {
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+  background: aquamarine;
+  padding: 20px;
+  border-radius: 12px;
+}

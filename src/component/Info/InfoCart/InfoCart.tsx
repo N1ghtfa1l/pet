@@ -1,11 +1,14 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import LeftButton from "../../UI/InfoButtons/LeftButton";
 import RigtButton from "../../UI/InfoButtons/RightButton";
 import { Film } from "../../../types/types";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addPlayer } from "../../store/slices/slicesPlayer";
 import { addFavorit } from "../../store/slices/slicesFavorit";
+import NotificationAdd from "../../Notification/NotificationAdd";
+import { RootState } from "../../store/store";
+import NotificationInclude from "../../Notification/NotificationInclude";
 
 interface props {
   film: Film;
@@ -13,9 +16,23 @@ interface props {
 
 const InfoCart: FC<props> = ({ film }) => {
   const dispatch = useDispatch();
+  const [showAddNotification, setAddShowNotification] =
+    useState<boolean>(false);
+  const [showIncludeNotification, setShowIncludeNotification] =
+    useState<boolean>(false);
+
+  const favorit = useSelector((state: RootState) => state.favoritFilms.value);
 
   const handlerAddFavorit = () => {
     dispatch(addFavorit(film));
+    const includeFavorit = favorit.some((el: any) => el.id === film.id);
+    if (!includeFavorit) {
+      setAddShowNotification(true);
+      setTimeout(() => setAddShowNotification(false), 3000);
+    } else {
+      setShowIncludeNotification(true);
+      setTimeout(() => setShowIncludeNotification(false), 3000);
+    }
   };
 
   const handlerAddPlayer = () => {
@@ -54,6 +71,8 @@ const InfoCart: FC<props> = ({ film }) => {
             <span>{film.genre}</span>
             <span>16+</span>
           </div>
+          {showAddNotification && <NotificationAdd props={film} />}
+          {showIncludeNotification && <NotificationInclude props={film} />}
         </div>
       </div>
     </div>

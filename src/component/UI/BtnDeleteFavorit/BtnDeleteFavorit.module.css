@@ -1,0 +1,13 @@
+.buttonFavoritDelete {
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.buttonFavoritDelete:hover {
+    background-color: rgb(51, 50, 50);
+    color: rgb(206, 203, 203);
+}
