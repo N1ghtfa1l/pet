@@ -21,7 +21,6 @@ export const slicesPlayer = createSlice({
   },
 })
 
-// Action creators are generated for each case reducer function
 export const { addPlayer } = slicesPlayer.actions
 
 export default slicesPlayer.reducer

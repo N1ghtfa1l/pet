@@ -14,7 +14,7 @@
 
 .rightButtonActive {
   color: black;
-  background: white(4, 85, 151);
+  background: #f0f0f0;
   border: none;
   padding: 10px 20px;
   border-radius: 20px;

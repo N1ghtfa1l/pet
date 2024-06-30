@@ -22,7 +22,6 @@ export const slicesFavorit = createSlice({
   },
 })
 
-// Action creators are generated for each case reducer function
 export const { addFavorit } = slicesFavorit.actions
 
 export default slicesFavorit.reducer

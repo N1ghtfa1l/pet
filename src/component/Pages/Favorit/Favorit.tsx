@@ -8,7 +8,6 @@ import { RootState } from "../../store/store";
 
 const Favorit = () => {
 const favorit = useSelector((state:RootState)=> state.favoritFilms.value)
-console.log(favorit)
 
 
   return (

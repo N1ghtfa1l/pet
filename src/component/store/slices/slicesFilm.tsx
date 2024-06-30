@@ -19,7 +19,6 @@ export const slicesFilm = createSlice({
   },
 })
 
-// Action creators are generated for each case reducer function
 export const { addFilm } = slicesFilm.actions
 
 export default slicesFilm.reducer

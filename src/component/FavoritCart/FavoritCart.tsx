@@ -18,6 +18,7 @@ const FavoritCart:FC<Props> = ({el}) => {
           <div className="favoritDate">{el.date}</div>
         </div>
       </div>
+      <button className="buttonFavoritDelete">Удалить</button>
     </div>
   );
 };
