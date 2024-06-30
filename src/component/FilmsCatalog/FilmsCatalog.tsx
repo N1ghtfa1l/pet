@@ -24,7 +24,6 @@ const FilmsCatalog = () => {
   const [selectedGenre, setSelectedGenre] = useState("");
 
   const selectFilms = films.filter((el) => el.genre === selectedGenre);
-  console.log(selectFilms)
 
   return (
     <div>
@@ -36,15 +35,15 @@ const FilmsCatalog = () => {
           <div className="catalogContent">
             <div className="catalogLeft">
               {select.map((el) => (
-                <div onClick={() => setSelectedGenre(el)}>
-                  <div className="catalogSelect">{el}</div>
+                <div key={el} onClick={() => setSelectedGenre(el)}>
+                  <div className="catalogSelect" key={el}>{el}</div>
                 </div>
               ))}
             </div>
             <div className="catalogRight">
               {selectFilms.length > 0
-                ? selectFilms.map((el: any) => <CatalogCart film={el} />)
-                : films.map((el: any) => <CatalogCart film={el} />)}
+                ? selectFilms.map((el: any) => <CatalogCart film={el}  key={el.id} />)
+                : films.map((el: any) => <CatalogCart film={el} key={el.id} />)}
             </div>
           </div>
         </div>

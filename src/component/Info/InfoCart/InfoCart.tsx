@@ -3,8 +3,9 @@ import LeftButton from "../../UI/InfoButtons/LeftButton";
 import RigtButton from "../../UI/InfoButtons/RightButton";
 import { Film } from "../../../types/types";
 import { Link } from "react-router-dom";
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import { addPlayer } from "../../store/slices/slicesPlayer";
+import { addFavorit } from "../../store/slices/slicesFavorit";
 
 interface props {
   film: Film;
@@ -13,12 +14,16 @@ interface props {
 const InfoCart: FC<props> = ({ film }) => {
   const dispatch = useDispatch();
 
+  const handlerAddFavorit = () => {
+    dispatch(addFavorit(film));
+  };
+
   const handlerAddPlayer = () => {
     const newPlayer = {
       id: film.id,
       src: film.src,
-    }
-    dispatch(addPlayer(newPlayer))
+    };
+    dispatch(addPlayer(newPlayer));
   };
 
   return (
@@ -33,13 +38,9 @@ const InfoCart: FC<props> = ({ film }) => {
         <div className="cartRightSubtitle">{film.subtitle}</div>
         <div className="cartRightButtons">
           <Link to={`/player/${film.id}`}>
-            <LeftButton onClick={() => handlerAddPlayer()}>
-              Смотреть
-            </LeftButton>
+            <LeftButton onClick={() => handlerAddPlayer()}>Смотреть</LeftButton>
           </Link>
-          <RigtButton additionalClass="rightButtonActive">
-            В избранное
-          </RigtButton>
+          <RigtButton onClick={handlerAddFavorit}>В избранное</RigtButton>
         </div>
         <div className="cartRightDesc">О фильме</div>
         <div className="cartRightTable">

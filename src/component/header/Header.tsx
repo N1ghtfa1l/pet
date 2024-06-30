@@ -12,7 +12,7 @@ const Header: FC = () => {
         <div className="headerInner">
           <div className="headerBox">
             <Menu />
-            <Link to='/'>
+            <Link to="/">
               <Logo />
             </Link>
           </div>

@@ -20,9 +20,11 @@ const Menu = () => {
             <li>Главная</li>
           </Link>
           <Link to="/filmscatalog">
-          <li>Каталог фильмов</li>
+            <li>Каталог фильмов</li>
           </Link>
-          <li>Избранное</li>
+          <Link to="/favorit">
+            <li>Избранное</li>
+          </Link>
         </ul>
       </div>
     </div>

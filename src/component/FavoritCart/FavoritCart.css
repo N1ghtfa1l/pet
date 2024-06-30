@@ -1,0 +1,30 @@
+
+.favoritInnerContent {
+    margin: 15px 0;
+}
+.favoritCart {
+    display: flex;
+    gap: 0 10px;
+}
+.favoritImg {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.favoritCartInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Montserrat';
+    font-size: 25px;
+}
+.favoritImg {
+    height: 200px;
+    width: 150px;
+    background: aqua;
+}
+.favoritSubtitle {
+    margin: 20px 0;
+}

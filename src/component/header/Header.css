@@ -1,24 +1,24 @@
 .container {
-    width: 1230px;
-    padding: 15px;
-    margin: 0 auto;
+  width: 1230px;
+  padding: 15px;
+  margin: 0 auto;
 }
 .header {
-    padding: 15px 0;
-    background: rgb(54, 50, 50);
-    position: absolute;
-    z-index: 1000;
-    width: 100%;
-    top: 0;
-    left: 0;
+  padding: 15px 0;
+  background: rgb(54, 50, 50);
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 .headerInner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .headerBox {
-    display: flex;
-    align-items: center;
-    gap: 0 15px;
+  display: flex;
+  align-items: center;
+  gap: 0 15px;
 }

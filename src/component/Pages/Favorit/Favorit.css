@@ -1,0 +1,13 @@
+.faovritContainer {
+    width: 1430px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.favoritInner {
+    margin: 100px;
+}
+.favoritInnerTitle {
+    font-family: 'Montserrat';
+    font-size: 30px;
+}
+
