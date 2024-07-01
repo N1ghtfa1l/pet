@@ -5,6 +5,7 @@
 .inputList {
   width: 400px;
   min-height: 50px;
+  max-height: 600px;
   background: rgb(54, 50, 50);
   position: absolute;
   flex-direction: column;
@@ -12,7 +13,12 @@
   display: flex;
   flex-direction: column;
   gap: 4px 0;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
+  overflow-y: auto;
+}
+.inputSelect:hover {
+  background: rgb(77, 72, 72);
+  transition: 0.5s;
 }
 .inputListActive {
   display: flex;

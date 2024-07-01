@@ -3,10 +3,12 @@ import { Film } from '../../../types/types'
 
 export interface CounterState {
   value: Film[]
+  isLoaded: boolean
 }
 
 const initialState: CounterState = {
   value: [],
+  isLoaded:false,
 }
 
 export const slicesFilm = createSlice({
@@ -14,7 +16,8 @@ export const slicesFilm = createSlice({
   initialState,
   reducers: {
     addFilm: (state, action) => {
-        state.value.push(action.payload)
+        state.value.push(...action.payload)
+        state.isLoaded = true
     },
   },
 })

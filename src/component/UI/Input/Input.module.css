@@ -3,7 +3,7 @@
     height: 40px;
     border-radius: 10px;
     outline: none;
-    background: rgb(53, 52, 52);
-    color: white;
+    background: white(53, 52, 52);
+    color: black;
     padding: 12px;
 }

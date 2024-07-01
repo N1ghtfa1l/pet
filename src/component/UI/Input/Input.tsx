@@ -1,18 +1,40 @@
 import React, { FC, useState } from "react";
 import style from "./Input.module.css";
 import "./Input.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../store/store";
-import { useMemo } from "react";
+import { useMemo, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
+import { addFilm } from "../../store/slices/slicesFilm";
+import PostService from "../../API/fetch";
 
 const Input: FC = () => {
+  const dispatch = useDispatch();
+  const isLoaded = useSelector((state: RootState) => state.film.isLoaded);
+  const allFilms = useSelector((state: RootState) => state.film.value);
   const [value, setValue] = useState<string>("");
-  const films = useSelector((state: RootState) => state.allFilms.value);
+
+  const fetchFilm = useCallback(async () => {
+    try {
+      const films = await PostService.getAll();
+
+      dispatch(addFilm(films));
+    } catch (error) {
+      console.error("Error fetching films:", error);
+    }
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (!isLoaded) {
+      fetchFilm();
+    }
+  }, [fetchFilm, isLoaded]);
+
   const filmsFilter = useMemo(() => {
-    return films.filter((film: any) =>
+    return allFilms.filter((film: any) =>
       film.title.toLowerCase().includes(value.toLowerCase())
     );
-  }, [films, value]);
+  }, [allFilms, value]);
 
   const change = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
@@ -33,7 +55,11 @@ const Input: FC = () => {
         }
       >
         {filmsFilter.length ? (
-          filmsFilter.map((el: any) => <div key={el.id}>{el.title}</div>)
+          filmsFilter.map((el: any) => (
+            <Link to={`/info/${el.id}`}>
+              <div className="inputSelect" key={el.id}>{el.title} </div>
+            </Link>
+          ))
         ) : (
           <p>Ничего не найдено</p>
         )}
