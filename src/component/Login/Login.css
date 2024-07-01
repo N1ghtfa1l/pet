@@ -1,0 +1,42 @@
+.LoginContainer {
+    width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.loginTitle {
+    font-size: 30px;
+    font-family: 'Montserrat';
+    margin: 10px 0;
+}
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px 0;
+    justify-content: center;
+    align-items: center;
+}
+.loginForm input {
+    width: 400px;
+    height: 30px;
+    outline: none;
+
+}
+.loginForm button {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.loginForm button:hover {
+    background-color: rgb(206, 206, 206);
+}

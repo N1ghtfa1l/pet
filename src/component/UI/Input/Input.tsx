@@ -56,8 +56,10 @@ const Input: FC = () => {
       >
         {filmsFilter.length ? (
           filmsFilter.map((el: any) => (
-            <Link to={`/info/${el.id}`}>
-              <div className="inputSelect" key={el.id}>{el.title} </div>
+            <Link to={`/info/${el.id}`} key={el.id}>
+              <div className="inputSelect" key={el.id}>
+                {el.title}{" "}
+              </div>
             </Link>
           ))
         ) : (

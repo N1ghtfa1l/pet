@@ -1,0 +1,11 @@
+.HeaderAuthBtn {
+  color: white;
+  background-color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.HeaderAuthBtn:hover {
+  background-color: rgb(97, 94, 94);
+}

@@ -3,6 +3,7 @@ import slicesFilmReducer from './slices/slicesFilm'
 import slicesPlayerReducer from './slices/slicesPlayer'
 import slicesAllFilms from './slices/slicesAllFilm'
 import slicesFavorit from './slices/slicesFavorit'
+import slicesAuth from './slices/slicesAuth'
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     player: slicesPlayerReducer,
     allFilms: slicesAllFilms,
     favoritFilms: slicesFavorit,
+    auth: slicesAuth,
   },
 })
 

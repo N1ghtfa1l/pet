@@ -17,7 +17,7 @@ const Header: FC = () => {
             </Link>
           </div>
           <Input />
-          <button>Войти</button>
+        
         </div>
       </div>
     </header>
