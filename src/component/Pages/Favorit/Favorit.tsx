@@ -17,7 +17,7 @@ const Favorit = () => {
           {favorit.length > 0 ? (
             favorit.map((el: Film) => <FavoritCart key={el.id} el={el} />)
           ) : (
-            <p>Вы ничего не добавили</p>
+            <p className="favoritEmpty">Ваш список избранного пуст </p>
           )}
         </div>
       </div>
