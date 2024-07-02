@@ -17,7 +17,6 @@ const Header: FC = () => {
             </Link>
           </div>
           <Input />
-        
         </div>
       </div>
     </header>

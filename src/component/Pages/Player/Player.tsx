@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { RootState } from "../../store/store";
 import "./Player.css";
+import PlayerChat from "../../PlayerChat/PlayerChat";
 const Player = () => {
   const player = useSelector((state: RootState) => state.player.value);
   const { id } = useParams<{ id: string }>();
@@ -20,6 +21,7 @@ const Player = () => {
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       ></iframe>
+      <PlayerChat/>
     </div>
   );
 };

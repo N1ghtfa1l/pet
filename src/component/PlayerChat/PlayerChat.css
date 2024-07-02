@@ -1,0 +1,49 @@
+.playerChat {
+  width: 20%;
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.playerTop {
+  background: white;
+}
+.playerTop button {
+  align-self: start;
+  font-size: 15px;
+  background: white;
+  border: none;
+  font-family: "Montserrat";
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.playerTop button:hover {
+  background-color: rgb(85, 85, 85);
+}
+
+.playerChatMessage {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.playerChatForm input {
+  height: 50px;
+  width: 100%;
+  font-family: "Montserrat";
+}
+.playerChatForm button {
+  font-size: 15px;
+  background: white;
+  border: none;
+  font-family: "Montserrat";
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.playerMessages {
+  min-width: 10px;
+  margin: 20px;
+  background: white;
+  padding: 5px;
+}
