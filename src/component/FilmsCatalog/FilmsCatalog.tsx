@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
 
 const FilmsCatalog = () => {
-  const films = useSelector((state:RootState)=> state.film.value)
+  const films = useSelector((state: RootState) => state.film.value);
 
   const select = ["Драма", "Боевик", "Фантастика", "Все"];
 

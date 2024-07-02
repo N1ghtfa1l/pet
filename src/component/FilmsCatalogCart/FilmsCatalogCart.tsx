@@ -1,13 +1,13 @@
 import React, { FC } from "react";
 import CatalogCart from "../CatalogCart/CatalogCart";
-import './FilmsCatalogCart.css'
+import "./FilmsCatalogCart.css";
 
 interface Props {
-    films: any,
-    selectFilms: any,
+  films: any;
+  selectFilms: any;
 }
 
-const FilmsCatalogCart:FC<Props> = ({films, selectFilms}) => {
+const FilmsCatalogCart: FC<Props> = ({ films, selectFilms }) => {
   return (
     <div>
       {films.length > 0 ? (

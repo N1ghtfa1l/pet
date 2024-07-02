@@ -14,9 +14,9 @@ const Info = () => {
   const film = films.find((film) => film.id.toString() === id);
 
   return (
-    <div className="info">
+    <>
       <Header />
-      <div className="container">
+      <div className="infoContainer">
         <div className="infoInner">
           <Link to="/">
             <BackButton> Назад</BackButton>
@@ -24,7 +24,7 @@ const Info = () => {
           {film ? <InfoCart film={film} /> : <p>Идет загрузка</p>}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

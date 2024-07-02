@@ -18,8 +18,8 @@ app.get("/get-message", (req, res) => {
 
 app.post("/new-message", (req, res) => {
   const message = req.body;
-  emitter.emit('newMessage', message);
-  res.status(200).send(); 
+  emitter.emit("newMessage", message);
+  res.status(200).send();
 });
 
 app.listen(PORT, () => console.log(`Сервер запущен на порту ${PORT}`));

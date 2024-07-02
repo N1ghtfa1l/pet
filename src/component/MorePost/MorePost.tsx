@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import './MorePost.css'
+import "./MorePost.css";
 
 interface Props {
   limit: number;
@@ -15,7 +15,13 @@ const MorePost: FC<Props> = ({ limit, setLimit, fetchPost }) => {
   };
   return (
     <>
-      {limit >= 100 ? <div></div> : <button className="morePostBtn" onClick={loadMorePosts}>Загрузить еще</button>}
+      {limit >= 100 ? (
+        <div></div>
+      ) : (
+        <button className="morePostBtn" onClick={loadMorePosts}>
+          Загрузить еще
+        </button>
+      )}
     </>
   );
 };

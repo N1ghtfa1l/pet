@@ -1,7 +1,7 @@
 .player {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 .playerVideo {
-    width: 80%;
+  width: 80%;
 }
