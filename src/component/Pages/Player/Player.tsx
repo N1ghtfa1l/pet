@@ -21,7 +21,7 @@ const Player = () => {
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       ></iframe>
-      <PlayerChat/>
+      <PlayerChat />
     </div>
   );
 };

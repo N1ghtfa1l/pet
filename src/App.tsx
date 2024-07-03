@@ -12,9 +12,10 @@ import { RootState } from "./component/store/store";
 
 function App() {
   const auth = useSelector((state: RootState) => state.auth.value);
+  const isAuthenticated = localStorage.getItem('isAuthenticated')
   return (
     <div className="App">
-      {auth ? (
+      {auth || isAuthenticated ? (
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<Home />} />

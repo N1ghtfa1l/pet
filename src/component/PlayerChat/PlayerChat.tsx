@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./PlayerChat.css";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import sendMessage from "../sendMessage/sendMessage";
-import { fetchInitialMessages, subscribe } from "../../ServerSubsribe/ServerSubscribe";
+import {
+  fetchInitialMessages,
+  subscribe,
+} from "../../ServerSubsribe/ServerSubscribe";
 
 const PlayerChat = () => {
   const [messagePost, setMessagePost] = useState<any[]>([]);

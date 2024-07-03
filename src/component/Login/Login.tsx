@@ -12,6 +12,7 @@ const Login = () => {
   const auth = (e: any) => {
     e.preventDefault();
     dispatch(addAuth(true));
+    localStorage.setItem("isAuthenticated", "true");
     navigate("/");
   };
 

@@ -1,9 +1,7 @@
 import axios from "axios";
 import { Dispatch, SetStateAction } from "react";
 
-const subscribe = async (
-  setMessagePost: Dispatch<SetStateAction<any[]>>
-) => {
+const subscribe = async (setMessagePost: Dispatch<SetStateAction<any[]>>) => {
   try {
     const { data } = await axios.get("http://localhost:5000/get-message");
     setMessagePost((prevMessages) => [...prevMessages, data]);
